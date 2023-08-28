@@ -305,7 +305,7 @@ case $opt in
 7) clear ; running ;;
 8) clear ; nano /etc/issue.net ;;
 9) clear ; mbot ;;
-10) clear ; wget https://raw.githubusercontent.com/Andyyuda/xolpanel/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
+10) clear ; wget https://raw.githubusercontent.com/kytrx/xolpanel/main/xolpanel.sh && chmod +x xolpanel.sh && ./xolpanel.sh ;;
 11) clear ; add-host ;; 
 12) clear ; clear ; wget --load-cookies /tmp/cookies.txt ${UDPX} -O install-udp && rm -rf /tmp/cookies.txt && chmod +x install-udp && ./install-udp ;;
 00) exit ;;
