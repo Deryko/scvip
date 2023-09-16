@@ -164,7 +164,7 @@ botbckpBot_menu() {
 	echo -e " ${Blue}│$NC\033[41m               Telegram Bot (AutoBackup)               \E[0m"
 	echo -e " ${Blue}╰═══════════════════════════════════════════════════════╯${NC}"
     echo -e " ${Blue}╭═══════════════════════════════════════════════════════╮${NC}"
-    echo -e " ${Blue}│$NC ${green} VPS Data Backup By YogzVPN"
+    echo -e " ${Blue}│$NC ${green} VPS Data Backup By Koreke"
     echo -e " ${Blue}│$NC"
     echo -e " ${Blue}│$NC ${green} Status AutoBackup : $sts"
     echo -e " ${Blue}│$NC [${green}1${NC}] Setup Bot Telegram \e[0m"
