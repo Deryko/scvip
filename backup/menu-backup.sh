@@ -18,7 +18,7 @@ echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo -e
 echo -e "${BlueCyan}              Menu Backup                   "
 echo -e
-echo -e "            t.me/Alvi_cell       "
+echo -e "            Backup & Restore       "
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo
 echo
@@ -41,7 +41,7 @@ figlet "backup" | lolcat
 backup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Alvi cell tunnel"
+echo "Terimakasih sudah menggunakan layanan script"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -52,7 +52,7 @@ figlet "Restore" | lolcat
 restore
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Alvi cell tunnel"
+echo "Terimakasih sudah menggunakan layanan script"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -62,7 +62,7 @@ figlet "strt"
 strt
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Alvi cell tunnel"
+echo "Terimakasih sudah menggunakan layanan script"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -71,7 +71,7 @@ then
 limitspeed
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Alvi cell tunnel"
+echo "Terimakasih sudah menggunakan layanan script"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -81,7 +81,7 @@ then
 autobackup
 echo "--------------------------------------------------------"
 echo
-echo "Terimakasih sudah menggunakan layanan script Alvi cell tunnel"
+echo "Terimakasih sudah menggunakan layanan script"
 echo
 echo "--------------------------------------------------------"
 fi
