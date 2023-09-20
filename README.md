@@ -4,3 +4,6 @@
 
 # `FixSSH`
 <pre><code>wget -q -O fix "https://raw.githubusercontent.com/xsm-syn/fix/main/ws-700.sh" && bash fix</pre></code>
+
+# 'Manual Update'
+<pre><code>wget https://raw.githubusercontent.com/Deryko/scvip/main/updatemenu.sh && chmod +x updatemenu.sh && ./updatemenu.sh</pre></code>
