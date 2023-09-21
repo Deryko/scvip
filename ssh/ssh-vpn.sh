@@ -271,7 +271,7 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O mbot "https://raw.githubusercontent.com/Deryko/scvip/main/menu/mbot.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/Deryko/scvip/main/backup/menu-backup.sh"
 wget -O menu "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu-vless.sh"
