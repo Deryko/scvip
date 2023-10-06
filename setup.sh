@@ -221,6 +221,7 @@ wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/Deryko/scvip/ma
 wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu-trojan.sh"
 wget -q -O /usr/bin/menu-trial "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu-trial.sh"
 wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/Deryko/scvip/main/menu/menu-ssh.sh"
+wget -q -O /usr/bin/menu-backup "https://raw.githubusercontent.com/Deryko/scvip/main/backup/menu-backup.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/Deryko/scvip/main/ssh/usernew.sh"
 wget -q -O /usr/bin/trial "https://raw.githubusercontent.com/Deryko/scvip/main/ssh/trial.sh"
 wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/Deryko/scvip/main/ssh/renew.sh"
@@ -289,6 +290,7 @@ chmod +x /usr/bin/menu-trojan
 chmod +x /usr/bin/updatemenu
 chmod +x /usr/bin/menu-trial
 chmod +x /usr/bin/menu-ssh
+chmod +x /usr/bin/menu-backup
 chmod +x /usr/bin/usernew
 chmod +x /usr/bin/trial
 chmod +x /usr/bin/renew
