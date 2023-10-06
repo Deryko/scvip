@@ -39,6 +39,20 @@ v2ray-menu
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
+read -p "Limit (GB) : " Quota
+read -p "Max Login : " iplimit
+#QUOTA
+if [[ $quota -gt 0 ]]; then
+echo -e "$[$quota * 1024 * 1024 * 1024]" > /etc/cobek/limit/vmess/quota/$user
+else
+echo > /dev/null
+fi
+#IPLIMIT
+if [[ $iplimit -gt 0 ]]; then
+echo -e "$iplimit" > /etc/cobek/limit/vmess/ip/$user
+else
+echo > /dev/null
+fi
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
