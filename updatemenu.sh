@@ -59,6 +59,7 @@ wget -O auto-reboot "https://raw.githubusercontent.com/Deryko/scvip/main/menu/au
 wget -O restart "https://raw.githubusercontent.com/Deryko/scvip/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/Deryko/scvip/main/menu/bw.sh"
 wget -O genssl "https://raw.githubusercontent.com/Deryko/scvip/main/ssh/genssl.sh"
+wget -O menu-backup "https://raw.githubusercontent.com/Deryko/scvip/main/backup/menu-backup.sh"
 cd
 echo -e "Back To menu 2 Sec"
 sleep 2
