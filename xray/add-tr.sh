@@ -35,7 +35,7 @@ clear
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-read -p "Limit (GB) : " Quota
+read -p "Limit (GB) : " quota
 read -p "Max Login : " iplimit
 #QUOTA
 if [[ $quota -gt 0 ]]; then
