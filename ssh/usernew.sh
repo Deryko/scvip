@@ -17,7 +17,8 @@ echo -e "\E[0;41;36m            SSH Account            \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -p "Username : " Login
 read -p "Password : " Pass
-read -p "Expired (hari): " masaaktif
+read -p "Max Login : " iplimit
+read -p "Expired (Days): " masaaktif
 
 IP=$(curl -sS ifconfig.me);
 ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
@@ -77,11 +78,19 @@ echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033
 
 else
 
+#limitip
+if [[ $iplimit -gt 0 ]]; then
+echo -e "$iplimit" > /etc/cobek/limit/ssh/ip/$Login
+else
+echo > /dev/null
+fi
+clear
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\E[0;41;36m   SSH OVPN Account  \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
+echo -e "Max Login   : $iplimit" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m◇━━━━━━━━━━━━━━━━━◇\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
 echo -e "Host Dns   : $sldomain" | tee -a /etc/log-create-user.log
