@@ -1,7 +1,19 @@
 #!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-#########################
+# BOT INFORMATION
+date=$(date -R | cut -d " " -f -5)
+export CHATID="5795571992"
+export KEY="6079069898:AAGT8hggC62cVoeKq1Q1k37sWj2Bys5NL1M"
+export TIME="10"
+export URL="https://api.telegram.org/bot$KEY/sendMessage"
+IP=$(wget -qO- ipinfo.io/ip);
+domain=$(cat /etc/xray/domain)
+date=$(date +"%Y-%m-%d")
+apt install wget -y
+apt install curl -y
+apt install ruby -y
+gem install lolcat -y
 
 clear
 red='\e[1;31m'
@@ -414,9 +426,12 @@ echo "===============-[ Script Created By HANSKOR TUNNEL ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
+rm /root/limit >/dev/null 2>&1
+rm /root/setup.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
+touch /root/.system 
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
