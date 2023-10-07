@@ -8,5 +8,5 @@
 # `Manual Update`
 <pre><code>wget https://raw.githubusercontent.com/Deryko/scvip/main/updatemenu.sh && chmod +x updatemenu.sh && ./updatemenu.sh</pre></code>
 
-# 'Update Backup'
+# `Update Backup`
 <pre><code>wget https://raw.githubusercontent.com/Deryko/scvip/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
