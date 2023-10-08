@@ -18,7 +18,7 @@ fi
 
 
 
-echo "Proses Install Tools by Hanskorr...!"
+echo "Proses Install Tools by Koreke...!"
 echo "Proses Bwang..."
 sleep 2
 
