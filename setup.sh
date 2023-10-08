@@ -383,7 +383,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ HANSKOR TUNNEL ]-===================="
+echo "=====================-[ KOREKE TUNNEL ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -424,7 +424,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Created By HANSKOR TUNNEL ]-==============="
+echo "===============-[ Script Created By KOREKE TUNNEL ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
