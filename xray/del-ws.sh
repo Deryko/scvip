@@ -52,4 +52,5 @@ echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp"
 echo "==============================="
-echo "Script By ADAM SIJA"
+read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+menu
