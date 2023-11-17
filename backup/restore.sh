@@ -28,15 +28,9 @@ cp passwd /etc/
 cp group /etc/
 cp shadow /etc/
 cp gshadow /etc/
-cp chap-secrets /etc/ppp/
-cp passwd1 /etc/ipsec.d/passwd
-cp -r crot /var/lib/
-cp -r sstp /home/
-cp -r xray /etc/
-cp -r trojan-go /etc/
-cp -r shadowsocksr /usr/local/
-cp -r public_html /home/vps/
 cp crontab /etc/
+cp -r xray /etc/
+cp -r public_html /home/vps/
 strt
 rm -rf /root/backup
 rm -f backup.zip
