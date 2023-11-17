@@ -29,6 +29,7 @@ cp group /etc/
 cp shadow /etc/
 cp gshadow /etc/
 cp crontab /etc/
+cp -r /root/backup/scrz-prem /var/lib/
 cp -r xray /etc/
 cp -r public_html /home/vps/
 strt
