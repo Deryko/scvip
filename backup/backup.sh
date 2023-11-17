@@ -33,7 +33,7 @@ cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
 cp /etc/gshadow backup/
-cp -r /var/lib/scrz-prem/ /root/backup/scrz-prem
+cp -r /var/lib/SIJA/ /root/backup/SIJA
 cp -r /etc/xray backup/xray
 cp -r /home/vps/public_html backup/public_html
 cd /root
