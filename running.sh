@@ -1,8 +1,8 @@
 #!/bin/bash
 # Welcome Information
 # Edition : Stable Edition V1.0
-# Author  : ADAM SIJA
-# (C) Copyright 2021-2022 By ADAM SIJA
+# Author  : KOREKE
+# (C) Copyright 2021-2022 By KOREKE
 # =========================================
 
 # // Exporting Language to UTF-8
@@ -132,8 +132,8 @@ clear;clear;clear
 
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "                ${YELLOW}(${NC}${GREEN} STATUS SERVICE INFORMATION ${NC}${YELLOW})${NC}"
-echo -e "         OWNER : ${GREEN}OTTIN NETWORK ${NC}${YELLOW}(${NC} ${GREEN}ADAM SIJA ${NC}${YELLOW})${NC}"
-echo -e "       © Copyright By OTTIN NETWORK ${YELLOW}(${NC} 2021-2022 ${YELLOW})${NC}"
+echo -e "         OWNER : ${GREEN}KOREKE ${NC}${YELLOW}(${NC} ${GREEN}KOREKE ${NC}${YELLOW})${NC}"
+echo -e "       © Copyright By KOREKE ${YELLOW}(${NC} 2021-2022 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 echo -e "${RED_BG}                     Sytem Information                    ${NC}"
@@ -154,5 +154,5 @@ echo -e "Vless WS/GRPC       = $status_ss"
 echo -e "Trojan WS/GRPC      = $status_ss"
 echo -e "Shadowsocks WS/GRPC = $status_ss"
 echo ""
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Press any key to back on menu BY : KOREKE"
 menu
