@@ -4,7 +4,7 @@ echo "Checking VPS"
 
 clear 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE •          \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Restart All Services"
@@ -33,7 +33,7 @@ case $Restart in
                 1)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -68,13 +68,13 @@ case $Restart in
                 echo ""
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo ""
-                read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU"
+                read -n 1 -s -r -p "PRESS [ ENTER ] KELUAR MENU By : KOREKE"
                 restart
                 ;;
                 2)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -91,7 +91,7 @@ case $Restart in
                 3)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -108,7 +108,7 @@ case $Restart in
                 4)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE •          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -125,7 +125,7 @@ case $Restart in
                 5)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE •          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -142,7 +142,7 @@ case $Restart in
                 6)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -159,7 +159,7 @@ case $Restart in
                 7)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -176,7 +176,7 @@ case $Restart in
                 8)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE •          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -194,7 +194,7 @@ case $Restart in
                 9)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -213,7 +213,7 @@ case $Restart in
                 10)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE•          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -234,7 +234,7 @@ case $Restart in
                 11)
                 clear
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU By : KOREKE •          \E[0m"
                 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e ""
                 echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
@@ -258,5 +258,5 @@ case $Restart in
                 clear
                 exit
                 ;;
-                *) echo -e "" ; echo "Boh salah tekan, Sayang kedak Babi" ; sleep 1 ; restart ;;               
+                *) echo -e "" ; echo " salah tekan, lebih teliti lagi" ; sleep 1 ; restart ;;               
         esac
