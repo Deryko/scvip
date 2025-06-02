@@ -1,137 +1,95 @@
 #!/bin/bash
-# ==========================================
-# Color
+# COLOR VALIDATION
+clear
 RED='\033[0;31m'
 NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
+gray="\e[1;30m"
+Blue="\033[0;34m"
+green='\033[0;32m'
+grenbo="\e[92;1m"
+YELL='\033[0;33m'
+red() { echo -e "\\033[32;1m${*}\\033[0m"; }
 # Getting
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m"
 clear
-IP=$(curl -sS ipv4.icanhazip.com);
-date=$(date +"%Y-%m-%d");
-Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
-Info="${Green_font_prefix}[ON]${Font_color_suffix}"
-Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
-cek=$(grep -c -E "^# BEGIN_Backup" /etc/crontab)
-if [[ "$cek" = "1" ]]; then
-sts="${Info}"
-else
-sts="${Error}"
-fi
-function start() {
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-echo "Please enter your email"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
-fi
-cat << EOF >> /etc/crontab
-# BEGIN_Backup
-5 0 * * * root /root/backup
-# END_Backup
-EOF
-service cron restart
-sleep 1
-echo " Please Wait"
-clear
-echo " Autobackup Has Been Started"
-echo " Data Will Be Backed Up Automatically at 00:05 GMT +7"
-exit 0
-}
-function stop() {
-email=$(cat /home/email)
-sed -i "/^$email/d" /home/email
-sed -i "/^# BEGIN_Backup/,/^# END_Backup/d" /etc/crontab
-service cron restart
-sleep 1
-echo " Please Wait"
-clear
-echo " Autobackup Has Been Stopped"
-exit 0
+IP=$(wget -qO- icanhazip.com)
+dateToday=$(date +"%Y-%m-%d")
+USRSC=$(curl -sS https://https://raw.githubusercontent.com/Deryko/izin/main/ip | grep $MYIP | awk '{print $2}')
+
+setup_bot() {
+    switch=$(grep -i "switch" /root/.bckupbot | awk '{print $2}')
+    echo "Pergi ke @BotFather dan type /newbot untuk membuat bot baru"
+    echo "Pergi ke @MissRose_bot dan type /id untuk mendapatkan ID telegram"
+    echo ""
+    read -p "Bot Token : " getToken
+    read -p "Admin ID  : " adminID
+    echo "$getToken" >/root/.bckupbot
+    echo "$adminID" >>/root/.bckupbot
+    echo "switch $switch" >>/root/.bckupbot
+    read -n 1 -s -r -p "Press any key to back on Bot menu"
+    botbckpBot_menu
 }
 
-function gantipenerima() {
-rm -rf /home/email
-clear
-echo ""
-echo ""
-read -rp " Email    : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
+botBackup() {
+    bottoken=$(sed -n '1p' /root/.bckupbot | awk '{print $1}')
+    adminid=$(sed -n '2p' /root/.bckupbot | awk '{print $1}')
+    echo -e "[ ${green}INFO${NC} ] Create password for database"
+	read -t 10 -p "Enter password : "  InputPass
+	if [[ -z $InputPass ]]; then
+	InputPass="pakyavpnxbackdoor"
+	fi
+	sleep 1
+    echo -e "[ ${green}INFO${NC} ] • VPS Data Backup... "
+    sleep 1
+    echo -e "[ ${green}INFO${NC} ] • Directory Created... "
+    mkdir /root/backup &>/dev/null
+    sleep 1
+    echo -e "[ ${green}INFO${NC} ] • VPS Data Backup Start Now... "
+    echo -e "[ ${green}INFO${NC} ] • Please Wait , Backup In Process Now... "
+    sleep 1
+	cp /etc/passwd backup/ &>/dev/null
+	echo -e "[ ${green}INFO${NC} ] • Backup passwd data..."
+	sleep 1
+	cp /etc/group backup/ &>/dev/null
+	echo -e "[ ${green}INFO${NC} ] • Backup group data..."
+	sleep 1
+	cp /etc/shadow backup/ &>/dev/null
+	echo -e "[ ${green}INFO${NC} ] • Backup shadow data..."
+	sleep 1
+	cp /etc/gshadow backup/ &>/dev/null
+	echo -e "[ ${green}INFO${NC} ] • Backup gshadow data..."
+	sleep 1
+    cp -r /var/lib/kyt/ backup/kyt &>/dev/null
+    cp -r /etc/xray backup/xray &>/dev/null
+    cp -r /var/www/html backup/html &>/dev/null
+    cd /root &>/dev/null
+    zip -rP "$InputPass" "$IP-$USRSC-$dateToday.zip" backup >/dev/null 2>&1
+
+    echo -e "[ ${green}INFO${NC} ] • Sending Via Bot... "
+    curl -Ss --request POST \
+        --url "https://api.telegram.org/bot${bottoken}/sendDocument?chat_id=${adminid}&caption=Here Your Backup Today : ${dateToday}" \
+        --header 'content-type: multipart/form-data' \
+        --form document=@"/root/$IP-$USRSC-$dateToday.zip" >/root/t1
+
+    fileId=$(grep -o '"file_id":"[^"]*' /root/t1 | grep -o '[^"]*$')
+
+    curl -Ss --request GET \
+        --url "https://api.telegram.org/bot${bottoken}/getfile?file_id=${fileId}" >/root/t1
+
+    filePath=$(grep -o '"file_path":"[^"]'* /root/t1 | grep -o '[^"]*$')
+
+    curl -Ss --request GET \
+        --url "https://api.telegram.org/bot${bottoken}/sendMessage?chat_id=${adminid}&text=File ID   : <code>${fileId}</code>&parse_mode=html" &>/dev/null
+    curl -Ss --request GET \
+        --url "https://api.telegram.org/bot${bottoken}/sendMessage?chat_id=${adminid}&text=File Path : <code>${filePath}</code>&parse_mode=html" &>/dev/null
+
+    echo -e "[ ${green}INFO${NC} ] • Completed... "
+
+    rm -rf /root/backup
+    rm -r /root/$IP-$USRSC-$dateToday.zip
+    rm -f /root/t1
+    read -n 1 -s -r -p "Press any key to back on menu"
+    botbckpBot_menu
 }
-function gantipengirim() {
-echo "Please enter your email"
-read -rp " Email    : " -e email
-echo ""
-echo ""
-echo "Please enter your Password email"
-read -rp " Password : " -e pwdd
-rm -rf /etc/msmtprc
-cat<<EOF>>/etc/msmtprc
-defaults
-tls on
-tls_starttls on
-tls_trust_file /etc/ssl/certs/ca-certificates.crt
-account default
-host smtp.gmail.com
-port 587
-auth on
-user $email
-from $email
-password $pwdd
-logfile ~/.msmtp.log
-EOF
-}
-function testemail() {
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-start
-fi
-email=$(cat /home/email)
-echo -e "
-Ini adalah isi email percobaaan kirim email dari vps
-IP VPS : $IP
-Tanggal : $date
-" | mail -s "Percobaan Pengiriman Email" $email
-}
-clear
-echo -e "\033[5;36m==============================\033[0m"
-echo -e "     Autobackup Data $sts     "
-echo -e "\033[5;36m==============================\033[0m"
-echo -e "\033[92;1m"
-echo -e "1. Start Autobackup"
-echo -e "2. Stop Autobackup"
-echo -e "3. Ganti Email Penerima"
-echo -e "4. Ganti Email Pengirim"
-echo -e "5. Test kirim Email"
-echo -e "\033[0m"
-echo -e "\033[5;36m==============================\033[0m"
-read -rp "Please Enter The Correct Number : " -e num
-case $num in
-1)
-start
-;;
-2)
-stop
-;;
-3)
-gantipenerima
-;;
-4)
-gantipengirim
-;;
-5)
-testemail
-;;
-*)
-clear
-;;
-esac
+
